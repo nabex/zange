@@ -1,57 +1,78 @@
 <!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-    <title>ニフティクラウドmobile backend チュートリアルアプリ</title>
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <script src="components/loader.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <title>商店街の懺悔</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="components/monaca-onsenui/css/onsenui.css"/>
+  <link rel="stylesheet" href="components/monaca-onsenui/css/onsen-css-components.css"/>
+
+  <script src="components/monaca-onsenui/js/angular/angular.js"></script>
+  <script src="components/monaca-onsenui/js/onsenui.js"></script>
+  <script src="components/loader.js"></script>
+
+  <script>
+  ons.bootstrap();
+  </script>
+
 </head>
 <body>
 
-<header id="top-toolbar">
-    <h1>商店街の懺悔</h1>
-    <div class="subtitle"></div>
-</header>
+  <ons-navigator var="myNavigator">
+    <ons-page>
 
-<br />
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="ons.slidingMenu.toggle()">
+            <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">商店街の懺悔</div>
+      </ons-toolbar>
 
-<div class="table">
-    <div class="table-header">
-        <h2>商店街の懺悔
-        </h2>
-    </div>
-    <img src="img/top.jpg" width="100%"alt="" />
-    
-    <div class="table-body">
-        <div class="table-cell tappable right-arrow" id="todo-page">
-            <div class="table-cell-inner">
-                <h3 class="table-cell-title">TODOリスト</h3>
-                <p class="table-cell-subtitle">
-                    データストアの使い方を学ぶ
-                </p>
-            </div>
-        </div>
-        <div class="table-cell tappable right-arrow" id="gallery-page">
-            <div class="table-cell-inner">
-                <h3 class="table-cell-title">画像ギャラリー</h3>
-                <p class="table-cell-subtitle">
-                    ファイルストアの使い方を学ぶ
-                </p>
-            </div>
-        </div>
-        <div class="table-cell tappable right-arrow" id="login-page">
-            <div class="table-cell-inner">
-                <h3 class="table-cell-title">ログイン・ログアウトの実装</h3>
-                <p class="table-cell-subtitle">
-                    会員管理の使い方を学ぶ
-                </p>    
-            </div>
-        </div>
-    </div>
+      <div style="text-align: center">
+        <img src="img/top.jpg" width="100%"alt="" />
+
+        <ons-button onclick="myNavigator.pushPage('gallery.html', { animation : 'slide' } )">
+          懺悔する
+        </ons-button>
+
+        <ons-button onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
+          神になる
+        </ons-button>
+
+
+      </div>
+    </ons-page>
+  </ons-navigator>
+
+
+
+  <!--
+  <div class="table">
+
+  <div class="table-body">
+  <div class="table-cell tappable right-arrow" id="todo-page">
+  <div class="table-cell-inner">
+  <h3 class="table-cell-title">TODOリスト</h3>
+  <p class="table-cell-subtitle">
+  データストアの使い方を学ぶ
+</p>
 </div>
+</div>
+<div class="table-cell tappable right-arrow" id="gallery-page">
+<div class="table-cell-inner">
+<h3 class="table-cell-title">画像ギャラリー</h3>
+<p class="table-cell-subtitle">
+ファイルストアの使い方を学ぶ
+</p>
+</div>
+</div>
+</div>
+</div>
+-->
 
 <script src="js/vendor/ncmb-1.2.1.min.js"></script>
 <script src="js/vendor/tappable.js"></script>

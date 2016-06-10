@@ -1,3 +1,55 @@
+// capture callback
+var captureSuccess = function(mediaFiles) {
+    var i, path, len;
+    for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+        path = mediaFiles[i].fullPath;
+        // do something interesting with the file
+    }
+};
+
+// capture error callback
+var captureError = function(error) {
+    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+};
+
+/* Cordovaで音声を録音する */
+function onCaptureAudio() {
+    navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:1});
+}
+
+/*--- AngularJSを使った録音用 ---*/
+
+var recordAppModule = angular.module('recordApp', ['onsen']);
+
+recordAppModule.controller('startRecordController', function($scope) {
+
+  $scope.startAudioRecord = function() {
+    media.startRecord();
+  };
+
+});
+
+recordAppModule.controller('stopRecordController', function($scope) {
+
+  $scope.stopAudioRecord = function() {
+    media.stopRecord();
+  };
+
+});
+
+recordAppModule.controller('playController', function($scope) {
+
+  $scope.startAudioPlay = function() {
+    media.play();
+  };
+
+  $scope.stopAudioPlay =  function() {
+    media.stop();
+  };
+
+});
+
+/*--- 元からあったやつ ---*/
 
 var GalleryController = {
 

@@ -8,6 +8,24 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <script src="components/loader.js"></script>
+  <script>
+    // capture callback
+    var captureSuccess = function(mediaFiles) {
+    var i, path, len;
+      for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+        path = mediaFiles[i].fullPath;
+        // do something interesting with the file
+    }
+};
+// capture error callback
+var captureError = function(error) {
+    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+};
+/* Cordovaで音声を録音する */
+function onCaptureAudio() {
+    navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:1});
+}
+  </script>
 </head>
 <body>
 
@@ -75,6 +93,12 @@
       <div class="left"><ons-back-button>Back</ons-back-button></div>
       <div class="center">懺悔する</div>
   </ons-toolbar>
+
+  <div style="text-align: center">
+    <ons-button onclick="onCaptureAudio();">
+      <ons-icon icon="fa-microphone"></ons-icon>
+    </ons-button>
+  </div>
 </ons-page>
 
 

@@ -24,8 +24,6 @@
 </head>
 <body>
 
-    
-
   <ons-navigator var="myNavigator"> 
   
   <ons-toolbar></ons-toolbar>
@@ -35,14 +33,48 @@
 
       <div class="content absolute">
         <a class="btn-large btn-width blue-grey darken-3"
-        onclick="myNavigator.pushPage('storelist.html', { animation : 'slide' } )">† 懺悔する †</a>
+        onclick="myNavigator.pushPage('storelist.html', { animation : 'slide' } );sound();">† 懺悔する †</a>
 
         <a class="btn-large btn-width blue-grey darken-3"
-        onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">† 神になる †</a>
+        onclick="myNavigator.pushPage('zangelist.html', { animation : 'slide' } );sound1()">† 神になる †</a>
       </div>
     </div>
   </ons-navigator>
   
+  
+      <audio id="kaminari" preload="auto">
+        <source src="audio/落雷button.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="click" preload="auto">
+        <source src="audio/LAPUTA_counter.mp3" type="audio/mp3">
+    </audio>
+    
+    
+      <script>
+     
+    function sound(){
+    // [ID:sound-file]の音声ファイルを再生[play()]する
+    document.getElementById( 'kaminari' ).currentTime = 0 ;
+    document.getElementById( 'kaminari' ).play() ;
+     // [currentTime]を認識した場合のみ、処理をする
+    if( typeof( document.getElementById( id ).currentTime ) != 'undefined' ){
+    document.getElementById( id ).currentTime = 0;
+    }
+    }
+</script>
+    
+    <script>
+  function sound1(){
+    // [ID:sound-file]の音声ファイルを再生[play()]する
+    document.getElementById( 'click' ).currentTime = 0 ;
+    document.getElementById( 'click' ).play() ;
+     // [currentTime]を認識した場合のみ、処理をする
+    if( typeof( document.getElementById( id ).currentTime ) != 'undefined' ){
+    document.getElementById( id ).currentTime = 0;
+    }
+   }
+    </script>
 
 <script src="js/vendor/ncmb-1.2.1.min.js"></script>
 <script src="js/vendor/tappable.js"></script>

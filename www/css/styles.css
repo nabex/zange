@@ -263,5 +263,17 @@ body > div.no-border-button.tap-active {
 .absolute {
     position: absolute;
     width:100%;
-    top: 350px;
+    top: 280px;
+}
+
+.list-item-container {
+  line-height: 1;
+  padding: 15px 0px 15px 15px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
 }

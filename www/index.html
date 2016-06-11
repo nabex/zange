@@ -24,47 +24,25 @@
 </head>
 <body>
 
-  <ons-navigator var="myNavigator">
+    
+
+  <ons-navigator var="myNavigator"> 
+  
+  <ons-toolbar></ons-toolbar>
 
     <div class="relative">
-      <img src="img/top.png" width="100%" alt="top" />
+      <img src="img/top.png" width="100%" height="device-height" alt="top" />
 
       <div class="content absolute">
         <a class="btn-large btn-width blue-grey darken-3"
-        onclick="myNavigator.pushPage('gallery.html', { animation : 'slide' } )">† 懺悔する †</a>
+        onclick="myNavigator.pushPage('storelist.html', { animation : 'slide' } )">† 懺悔する †</a>
 
         <a class="btn-large btn-width blue-grey darken-3"
         onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">† 神になる †</a>
       </div>
     </div>
-
   </ons-navigator>
-
-
-
-  <!--
-  <div class="table">
-
-  <div class="table-body">
-  <div class="table-cell tappable right-arrow" id="todo-page">
-  <div class="table-cell-inner">
-  <h3 class="table-cell-title">TODOリスト</h3>
-  <p class="table-cell-subtitle">
-  データストアの使い方を学ぶ
-</p>
-</div>
-</div>
-<div class="table-cell tappable right-arrow" id="gallery-page">
-<div class="table-cell-inner">
-<h3 class="table-cell-title">画像ギャラリー</h3>
-<p class="table-cell-subtitle">
-ファイルストアの使い方を学ぶ
-</p>
-</div>
-</div>
-</div>
-</div>
--->
+  
 
 <script src="js/vendor/ncmb-1.2.1.min.js"></script>
 <script src="js/vendor/tappable.js"></script>

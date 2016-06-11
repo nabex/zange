@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <title>ニフティクラウドmobile backend チュートリアルアプリ</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="components/loader.js"></script>
+</head>
+<body>
+
+  <ons-navigator var="myNavigator">
+  <ons-page>
+
+    <ons-toolbar>
+        <div class="center">エリアを選択</div>
+    </ons-toolbar>
+
+    <ons-list>
+      <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('eki', { animation : 'slide' } )">駅前・大門</ons-list-item>
+      <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('chuoh', { animation : 'slide' } )">中央</ons-list-item>
+      <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('goryokaku', { animation : 'slide' } )">五稜郭</ons-list-item>
+      <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('seibu', { animation : 'slide' } )">西部</ons-list-item>
+      <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('toubu', { animation : 'slide' } )">東部</ons-list-item>
+      <ons-list-item modifier="chevron" onclick="myNavigator.pushPage('hokubu', { animation : 'slide' } )">北部</ons-list-item>
+    </ons-list>
+  </ons-page>
+
+
+  <!-- 駅前・大門 -->
+  <ons-template id="eki">
+    <ons-page>
+
+      <ons-toolbar>
+        <div class="left" style="line-height: 44px">
+          <ons-back-button></ons-back-button>
+          <div class="center">駅前・大門エリア</div>
+        </div>
+      </ons-toolbar>
+
+      <ons-list>
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/eki/01.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">函館都心商店街振興組合</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/eki/02.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">函館大門街商興会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/eki/03.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">函館朝市協同組合連合会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/eki/04.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">函館自由市場協同組合</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+    </ons-page>
+  </ons-template>
+
+
+  <!-- 中央 -->
+  <ons-template id="chuoh">
+    <ons-page>
+
+      <ons-toolbar>
+        <div class="left" style="line-height: 44px">
+          <ons-back-button>Back</ons-back-button>
+          <div class="center">中央エリア</div>
+        </div>
+      </ons-toolbar>
+
+      <ons-list>
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/chuoh/01.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">中島町商店街振興組合</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html, { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/chuoh/02.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">中島町仲通り商店街</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/chuoh/03.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">堀川町振興会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/chuoh/04.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">函館中央街会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/chuoh/05.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">万代町商興会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+    </ons-page>
+  </ons-template>
+
+
+   <!-- 五稜郭 -->
+  <ons-template id="goryokaku">
+    <ons-page>
+
+      <ons-toolbar>
+        <div class="left" style="line-height: 44px">
+          <ons-back-button>Back</ons-back-button>
+          <div class="center">五稜郭エリア</div>
+        </div>
+      </ons-toolbar>
+
+      <ons-list>
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/goryokaku/01.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">五稜郭商店街振興組合</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html, { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/goryokaku/02.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">協同組合五稜郭</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/goryokaku/03.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">五稜郭商工親和会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/goryokaku/04.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">函館梁川商興会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/goryokaku/01.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">函館本町市場商業協同組合</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+    </ons-page>
+  </ons-template>
+
+
+   <!-- 西部 -->
+  <ons-template id="seibu">
+    <ons-page>
+
+      <ons-toolbar>
+        <div class="left" style="line-height: 44px">
+          <ons-back-button>Back</ons-back-button>
+          <div class="center">西部エリア</div>
+        </div>
+      </ons-toolbar>
+
+      <ons-list>
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/seibu/01.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">協同組合十字街商盛会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html, { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/seibu/02.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">大黒魚菜市場</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/seibu/03.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">たけだストアー</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/seibu/04.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">銀座魚菜市場</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/seibu/05.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">谷地頭廉売</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+    </ons-page>
+  </ons-template>
+
+
+     <!-- 東部 -->
+  <ons-template id="toubu">
+    <ons-page>
+
+      <ons-toolbar>
+        <div class="left" style="line-height: 44px">
+          <ons-back-button>Back</ons-back-button>
+          <div class="center">東部エリア</div>
+        </div>
+      </ons-toolbar>
+
+      <ons-list>
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/toubu/01.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">湯川商店街振興組合</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html, { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/toubu/02.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">湯川温泉商工親和会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/toubu/03.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">日花商盛会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/toubu/04.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">柏木商友会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/toubu/05.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">函館松陰通り商店街</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+      <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/toubu/06.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">協同組合バザール湯川</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/toubu/07.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">深掘ストアー</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/toubu/08.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">柏木魚菜市場</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+    </ons-page>
+  </ons-template>
+
+
+     <!-- 北部 -->
+  <ons-template id="hokubu">
+    <ons-page>
+
+      <ons-toolbar>
+        <div class="left" style="line-height: 44px">
+          <ons-back-button>Back</ons-back-button>
+          <div class="center">北部エリア</div>
+        </div>
+      </ons-toolbar>
+
+      <ons-list>
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/hokubu/01.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">美原商店街振興組合</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html, { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/hokubu/02.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">函館桐花通商店会</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/hokubu/03.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">美原廉売</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/hokubu/04.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">ニューとみおか廉売</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+          <ons-row>
+            <ons-col width="95px"><img src="img/store/hokubu/05.jpg" class="thumbnail"></ons-col>
+            <ons-col><div class="name">楽園ストアー</div></ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+    </ons-page>
+  </ons-template>
+
+
+</ons-navigator>
+
+
+  <script src="js/vendor/ncmb-1.2.1.min.js"></script>
+  <script src="js/vendor/tappable.js"></script>
+  <script src="js/vendor/zepto.min.js"></script>
+  <script src="js/vendor/spin.min.js"></script>
+  <script src="js/base.js"></script>
+  <script src="js/gallery.js"></script>
+
+  <script>
+  GalleryController.init();
+  </script>
+
+</body>
+</html>

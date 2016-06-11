@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-  <title>ニフティクラウドmobile backend チュートリアルアプリ</title>
+  <title>storeList</title>
   <link rel="stylesheet" href="css/styles.css">
 
   <script src="components/loader.js"></script>
 </head>
 <body>
 
-  <ons-navigator var="myNavigator">
+
   <ons-page>
 
     <ons-toolbar>
         <div class="center">エリアを選択</div>
+        <div class="left"><ons-back-button></ons-back-button></div>
     </ons-toolbar>
     
     
@@ -76,7 +77,8 @@
       </div>
     </div>
   </ons-page>
-
+  
+  
 
   <!-- 駅前・大門 -->
   <ons-template id="eki">
@@ -90,28 +92,28 @@
       </ons-toolbar>
 
       <ons-list>
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtitle', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/eki/01.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">函館都心商店街振興組合</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtitle', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/eki/02.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">函館大門街商興会</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtitle', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/eki/03.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">函館朝市協同組合連合会</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtitle', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/eki/04.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">函館自由市場協同組合</div></ons-col>
@@ -135,35 +137,35 @@
       </ons-toolbar>
 
       <ons-list>
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtile', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/chuoh/01.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">中島町商店街振興組合</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html, { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtile, { animation : 'slide' } ); onCaptureAudio('中島町仲通り商店街')">
           <ons-row>
             <ons-col width="95px"><img src="img/store/chuoh/02.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">中島町仲通り商店街</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtile', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/chuoh/03.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">堀川町振興会</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtile', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/chuoh/04.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">函館中央街会</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtile', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/chuoh/05.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">万代町商興会</div></ons-col>
@@ -187,35 +189,35 @@
       </ons-toolbar>
 
       <ons-list>
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtitle', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/goryokaku/01.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">五稜郭商店街振興組合</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html, { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtitle', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/goryokaku/02.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">協同組合五稜郭</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1.html', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtitle', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/goryokaku/03.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">五稜郭商工親和会</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtitle', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/goryokaku/04.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">函館梁川商興会</div></ons-col>
           </ons-row>
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('page1', { animation : 'slide' } )">
+        <ons-list-item modifier="chevron" class="list-item-container" onclick="myNavigator.pushPage('addtitle', { animation : 'slide' } )">
           <ons-row>
             <ons-col width="95px"><img src="img/store/goryokaku/01.jpg" class="thumbnail"></ons-col>
             <ons-col><div class="name">函館本町市場商業協同組合</div></ons-col>
@@ -403,21 +405,22 @@
 
     </ons-page>
   </ons-template>
+  
+  
+   <!-- タイトル追加 -->
+  <ons-template id="addtile">
+    <ons-page>
 
+      <ons-toolbar>
+        <div class="left" style="line-height: 44px">
+          <ons-back-button>Back</ons-back-button>
+          <div class="center">五稜郭エリア</div>
+        </div>
+      </ons-toolbar>
+      
+     </ons-page>
+  </ons-template>
 
-</ons-navigator>
-
-
-  <script src="js/vendor/ncmb-1.2.1.min.js"></script>
-  <script src="js/vendor/tappable.js"></script>
-  <script src="js/vendor/zepto.min.js"></script>
-  <script src="js/vendor/spin.min.js"></script>
-  <script src="js/base.js"></script>
-  <script src="js/gallery.js"></script>
-
-  <script>
-  GalleryController.init();
-  </script>
 
 </body>
 </html>

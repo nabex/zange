@@ -4,18 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-  <title>ニフティクラウドmobile backend チュートリアルアプリ</title>
-  <link rel="stylesheet" href="css/styles.css">
-
-  <script src="components/loader.js"></script>
+  <title>zangeList</title>
 </head>
 <body>
 
-  <ons-navigator var="myNavigator">
+
     <ons-page>
-    
         <ons-toolbar>
             <div class="center">懺悔を選択</div>
+            <div class="left"><ons-back-button></ons-back-button></div>
         </ons-toolbar>
         
         
@@ -61,23 +58,10 @@
                 
             </div>
         </div>
-        
-        
-            
     </ons-page>
-  </ons-navigator>
 
 
-  <script src="js/vendor/ncmb-1.2.1.min.js"></script>
-  <script src="js/vendor/tappable.js"></script>
-  <script src="js/vendor/zepto.min.js"></script>
-  <script src="js/vendor/spin.min.js"></script>
-  <script src="js/base.js"></script>
-  <script src="js/gallery.js"></script>
 
-  <script>
-  GalleryController.init();
-  </script>
 
 </body>
 </html>

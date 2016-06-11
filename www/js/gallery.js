@@ -1,53 +1,33 @@
-// capture callback
-var captureSuccess = function(mediaFiles) {
-    var i, path, len;
+/* 録音成功時の処理 */
+function captureSuccess(mediaFiles) {
+    var i, len;
     for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-        path = mediaFiles[i].fullPath;
-        // do something interesting with the file
+        uploadFile(mediaFiles[i]);
     }
-};
+}
 
-// capture error callback
-var captureError = function(error) {
-    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
-};
+/* 録音失敗時の処理 */
+function captureError(error) {
+    var msg = 'An error occurred during capture: ' + error.code;
+    navigator.notification.alert(msg, null, 'Uh oh!');
+}
 
 /* Cordovaで音声を録音する */
 function onCaptureAudio() {
     navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:1});
 }
 
-/*--- AngularJSを使った録音用 ---*/
-
-var recordAppModule = angular.module('recordApp', ['onsen']);
-
-recordAppModule.controller('startRecordController', function($scope) {
-
-  $scope.startAudioRecord = function() {
-    media.startRecord();
-  };
-
-});
-
-recordAppModule.controller('stopRecordController', function($scope) {
-
-  $scope.stopAudioRecord = function() {
-    media.stopRecord();
-  };
-
-});
-
-recordAppModule.controller('playController', function($scope) {
-
-  $scope.startAudioPlay = function() {
-    media.play();
-  };
-
-  $scope.stopAudioPlay =  function() {
-    media.stop();
-  };
-
-});
+/* ファイルのアップロード処理 */
+function uploadFile(mediaFile) {
+    var ncmb = new NCMB(window.APP_KEY, window.CLIENT_KEY);
+    ncmb.File.upload(mediaFile.name, mediaFile)
+        .then(function(data) {
+            console.log(data);
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
+}
 
 /*--- 元からあったやつ ---*/
 

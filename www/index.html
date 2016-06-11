@@ -12,7 +12,7 @@
   <script src="components/monaca-onsenui/js/angular/angular.js"></script>
   <script src="components/monaca-onsenui/js/onsenui.js"></script>
   <script src="components/loader.js"></script>
-
+  <script src="js/gallery.js"></script>
   <script>
   ons.bootstrap();
   </script>
@@ -42,7 +42,10 @@
         <ons-button onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
           神になる
         </ons-button>
-
+        
+        <ons-button onclick="onCaptureAudio()">
+          録音
+        </ons-button>
 
       </div>
     </ons-page>
@@ -74,7 +77,7 @@
 </div>
 -->
 
-<script src="js/vendor/ncmb-1.2.1.min.js"></script>
+<script src="js/vendor/ncmb.min.js"></script>
 <script src="js/vendor/tappable.js"></script>
 <script src="js/vendor/zepto.min.js"></script>
 <script src="js/base.js"></script>

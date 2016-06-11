@@ -6,108 +6,33 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <title>ニフティクラウドmobile backend チュートリアルアプリ</title>
   <link rel="stylesheet" href="css/styles.css">
-
+  
+  <script src="components/monaca-onsenui/js/angular/angular.js"></script>
+  <script src="components/monaca-onsenui/js/onsenui.js"></script>
   <script src="components/loader.js"></script>
-  <script>
-    // capture callback
-    var captureSuccess = function(mediaFiles) {
-    var i, path, len;
-      for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-        path = mediaFiles[i].fullPath;
-        // do something interesting with the file
-    }
-};
-// capture error callback
-var captureError = function(error) {
-    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
-};
-/* Cordovaで音声を録音する */
-function onCaptureAudio() {
-    navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:1});
-}
-  </script>
 </head>
+
 <body>
-
-  <!--
-  <ons-navigator var="myNavigator">
-  <ons-page>
-
-
-  <header id="top-toolbar">
-  <h1>画像ギャラリー</h1>
-  <div class="top-toolbar-left">
-  <div class="toolbar-button tappable" id="back">← 戻る</div>
-</div>
-</header>
-
-<div class="grid-table">
-<div class="grid-table-body">
-
-
-<div class="grid-table-cell">
-<img src="">
-</div>
-<div class="grid-table-cell">
-<img src="">
-</div>
-<div class="grid-table-cell">
-<img src="">
-</div>
-
-
-</div>
-</div>
-
-<div class="no-border-button tappable" style="position : relative">
-＋ 画像をアップロードする
-<form action="">
-<input type="file" id="image-file" name="image" style="opacity: 0.0; position : absolute; left : 0; right : 0; top : 0; bottom : 0; z-index : 20;" />
-</form>
-</div>
-
-<div class="templates">
-
-<div class="grid-table-cell" id="grid-table-cell-template">
-<img src="" >
-</div>
-
-</div>
-
-</ons-page>
-</ons-navigator>
--->
-
 <ons-page>
-  <!--
-  <ons-toolbar>
-    <div class="left">
-      <ons-toolbar-button onclick="myNavigator.popPage();">
-        <ons-icon icon="ion-arrow-left-c" size="28px" fixed-width="false"></ons-icon>
-      </ons-toolbar-button>
-    </div>
-    <div class="center">懺悔する</div>
-  </ons-toolbar>
-  -->
   <ons-toolbar>
       <div class="left"><ons-back-button>Back</ons-back-button></div>
       <div class="center">懺悔する</div>
   </ons-toolbar>
 
   <div style="text-align: center">
-    <ons-button onclick="onCaptureAudio();">
+    <ons-button onclick="onCaptureAudio()">
+      録音
       <ons-icon icon="fa-microphone"></ons-icon>
     </ons-button>
   </div>
 </ons-page>
 
-
-<script src="js/vendor/ncmb-1.2.1.min.js"></script>
+<script src="js/vendor/ncmb.min.js"></script>
 <script src="js/vendor/tappable.js"></script>
 <script src="js/vendor/zepto.min.js"></script>
 <script src="js/vendor/spin.min.js"></script>
 <script src="js/base.js"></script>
-<script src="js/gallery.js"></script>
+<script src="js/audio.js"></script>
 
 <script>
 GalleryController.init();

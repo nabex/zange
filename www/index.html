@@ -6,12 +6,16 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <title>商店街の懺悔</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="common/style.css">
   <link rel="stylesheet" href="components/monaca-onsenui/css/onsenui.css"/>
   <link rel="stylesheet" href="components/monaca-onsenui/css/onsen-css-components.css"/>
+  <link rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <script src="components/monaca-onsenui/js/angular/angular.js"></script>
   <script src="components/monaca-onsenui/js/onsenui.js"></script>
   <script src="components/loader.js"></script>
+
 
   <script>
   ons.bootstrap();
@@ -21,31 +25,19 @@
 <body>
 
   <ons-navigator var="myNavigator">
-    <ons-page>
 
-      <ons-toolbar>
-        <div class="left">
-          <ons-toolbar-button ng-click="ons.slidingMenu.toggle()">
-            <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
-          </ons-toolbar-button>
-        </div>
-        <div class="center">商店街の懺悔</div>
-      </ons-toolbar>
+    <div class="relative">
+      <img src="img/top.png" width="100%" alt="top" />
 
-      <div style="text-align: center">
-        <img src="img/top.jpg" width="100%"alt="" />
+      <div class="content absolute">
+        <a class="btn-large btn-width blue-grey darken-3"
+        onclick="myNavigator.pushPage('gallery.html', { animation : 'slide' } )">† 懺悔する †</a>
 
-        <ons-button onclick="myNavigator.pushPage('gallery.html', { animation : 'slide' } )">
-          懺悔する
-        </ons-button>
-
-        <ons-button onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">
-          神になる
-        </ons-button>
-
-
+        <a class="btn-large btn-width blue-grey darken-3"
+        onclick="myNavigator.pushPage('page2.html', { animation : 'slide' } )">† 神になる †</a>
       </div>
-    </ons-page>
+    </div>
+
   </ons-navigator>
 
 
@@ -79,6 +71,7 @@
 <script src="js/vendor/zepto.min.js"></script>
 <script src="js/base.js"></script>
 <script src="js/index.js"></script>
+<script src="js/materialize.js"></script>
 <script>IndexPageController.init();</script>
 
 </body>

@@ -30,7 +30,7 @@ html {
 
 body {
   width: 100%;
-  height: 100%;    
+  height: 100%;
   background-color: #F0F0F0;
   color: #333;
   font-size: 34px;
@@ -243,4 +243,25 @@ body > div.no-border-button.tap-active {
   -webkit-transition: background-color 0s linear, color 0s linear;
   background-color: #cccccc;
   color: white;
+}
+
+/*=================  add  ======================*/
+.content{
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.btn-width{
+    width: 80%;
+    margin-top: 10px;
+}
+
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+    width:100%;
+    top: 350px;
 }

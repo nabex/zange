@@ -252,6 +252,11 @@ body > div.no-border-button.tap-active {
   text-align: center;
 }
 
+.content2{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
 .btn-width{
     width: 80%;
     margin-top: 10px;
@@ -263,7 +268,7 @@ body > div.no-border-button.tap-active {
 .absolute {
     position: absolute;
     width:100%;
-    top: 280px;
+    bottom: 10%;
 }
 
 .list-item-container {
@@ -283,6 +288,13 @@ body > div.no-border-button.tap-active {
   line-height: 16px;
   font-size: 14px;
   margin-bottom: 6px;
+}
+
+.name1 {
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
 .desc {

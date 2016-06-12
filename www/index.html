@@ -6,7 +6,6 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <title>商店街の懺悔</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="common/style.css">
   <link rel="stylesheet" href="components/monaca-onsenui/css/onsenui.css"/>
   <link rel="stylesheet" href="components/monaca-onsenui/css/onsen-css-components.css"/>
   <link rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
@@ -14,14 +13,18 @@
 
   <script src="components/monaca-onsenui/js/angular/angular.js"></script>
   <script src="components/monaca-onsenui/js/onsenui.js"></script>
-  <script src="js/vendor/ncmb-1.2.1.min.js"></script>
+  <script src="components/loader.js"></script>
+  <script src="js/vendor/ncmb.min.js"></script>
   <script src="js/vendor/tappable.js"></script>
   <script src="js/vendor/zepto.min.js"></script>
-  <script src="components/loader.js"></script>
+  <script src="js/vendor/materialize.js"></script>
+  <script src="js/base.js"></script>
   <script src="js/audio.js"></script>
-  <script src="js/materialize.js"></script>
-
-
+  <script src="js/playlist.js"></script>
+  <script src="js/yurusu.js"></script>
+  
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  
   <script>
   ons.bootstrap();
   </script>
@@ -29,57 +32,60 @@
 </head>
 <body>
 
-  <ons-navigator var="myNavigator"> 
-  
-  <ons-toolbar></ons-toolbar>
+  <ons-navigator var="myNavigator">
+    <ons-page>
+
+      <ons-toolbar></ons-toolbar>
 
     <div class="relative">
       <img src="img/top.png" width="100%" height="device-height" alt="top" />
 
       <div class="content absolute">
         <a class="btn-large btn-width blue-grey darken-3"
-        onclick="myNavigator.pushPage('storelist.html', { animation : 'slide' } );sound();">† 懺悔する †</a>
+        onclick="myNavigator.pushPage('gallery.html', { animation : 'slide' } );sound();">† 懺悔する †</a>
 
         <a class="btn-large btn-width blue-grey darken-3"
-        onclick="myNavigator.pushPage('zangelist.html', { animation : 'slide' } );sound1()">† 神になる †</a>
+        onclick="myNavigator.pushPage('playlist.html', { animation : 'slide' } );sound1();">† 神になる †</a>
       </div>
     </div>
+    
+    </ons-page>
   </ons-navigator>
   
   
-      <audio id="kaminari" preload="auto">
-        <source src="audio/落雷button.mp3" type="audio/mp3">
+  <audio id="kaminari" preload="auto">
+    <source src="sound/zange.mp3" type="audio/mp3">
     </audio>
     
     <audio id="click" preload="auto">
-        <source src="audio/LAPUTA_counter.mp3" type="audio/mp3">
-    </audio>
-    
-    
+      <source src="sound/kami.mp3" type="audio/mp3">
+      </audio>
+  
+  
+  <script>
+      
+      function sound(){
+        // [ID:sound-file]の音声ファイルを再生[play()]する
+        document.getElementById( 'kaminari' ).currentTime = 0 ;
+        document.getElementById( 'kaminari' ).play() ;
+        // [currentTime]を認識した場合のみ、処理をする
+        if( typeof( document.getElementById( id ).currentTime ) != 'undefined' ){
+          document.getElementById( id ).currentTime = 0;
+        }
+      }
+      </script>
+      
       <script>
-     
-    function sound(){
-    // [ID:sound-file]の音声ファイルを再生[play()]する
-    document.getElementById( 'kaminari' ).currentTime = 0 ;
-    document.getElementById( 'kaminari' ).play() ;
-     // [currentTime]を認識した場合のみ、処理をする
-    if( typeof( document.getElementById( id ).currentTime ) != 'undefined' ){
-    document.getElementById( id ).currentTime = 0;
-    }
-    }
-</script>
-    
-    <script>
-  function sound1(){
-    // [ID:sound-file]の音声ファイルを再生[play()]する
-    document.getElementById( 'click' ).currentTime = 0 ;
-    document.getElementById( 'click' ).play() ;
-     // [currentTime]を認識した場合のみ、処理をする
-    if( typeof( document.getElementById( id ).currentTime ) != 'undefined' ){
-    document.getElementById( id ).currentTime = 0;
-    }
-   }
-    </script>
+      function sound1(){
+        // [ID:sound-file]の音声ファイルを再生[play()]する
+        document.getElementById( 'click' ).currentTime = 0 ;
+        document.getElementById( 'click' ).play() ;
+        // [currentTime]を認識した場合のみ、処理をする
+        if( typeof( document.getElementById( id ).currentTime ) != 'undefined' ){
+          document.getElementById( id ).currentTime = 0;
+        }
+      }
+      </script>
 
 </body>
 </html>

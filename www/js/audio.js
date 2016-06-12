@@ -16,7 +16,8 @@ function audioPlay(fileName) {
 }
 
 /* 音声を録音する */
-function onCaptureAudio(place, title) {
+function onCaptureAudio(place) {
+    var title = window.document.getElementById("title-name").value;
     navigator.device.capture.captureAudio(
         /* 成功時の処理 */
         function(mediaFiles) {
@@ -31,6 +32,21 @@ function onCaptureAudio(place, title) {
 }
 
 /************************* Private Methods *************************/
+
+/* データストアからデータを取得する */
+function getAudioData() {
+    console.debug("call getAudioData()");
+    var ncmb = new NCMB(window.APP_KEY, window.CLIENT_KEY);
+    var AudioData = ncmb.DataStore("AudioData");
+    AudioData.fetchAll()
+             .then(function(results) {
+                console.debug("データ登録処理:" + results.length + " 個取得");
+                console.debug(JSON.stringify(results));
+             })
+             .catch(function(err) {
+                console.debug("データ取得失敗:" + err);
+             });
+}
 
 /* ファイルのアップロード処理 */
 function uploadFile(mediaFile) {
@@ -115,3 +131,22 @@ function regData(file, place, title) {
 //         console.debug(reader.result);
 //     }
 // }
+
+/*** advance ***/
+function uploadAudioFile(audioFile) {
+    var file = new NCMB.File(audioFile.name, audioFile);
+}
+
+function onCaptureAudioFile() {
+    navigator.device.capture.captureAudio(
+        /* 成功時の処理 */
+        function(mediaFiles) {
+            for (var i = 0; i < mediaFiles.length; i += 1) {
+                uploadAudioFile(mediaFiles[i]);
+            }
+        },
+        /* 失敗時の処理 */
+        function(err) {
+            
+        }, {limit:1});
+}
